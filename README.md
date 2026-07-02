@@ -1,55 +1,62 @@
-Nama : Naufal Ahnafussidqi Perdana
+# 1. Judul Project
+**Image Manipulation - Tugas Pengolahan Sinyal Digital**
 
-NIM : 452024611023
+## 2. Nama Mahasiswa
+* **Nama:** Naufal Ahnafussidqi
+* **NIM:** 452024611023
+* **Repositori:** [NaufalAhnafussidqi/image-manipulation](https://github.com)
 
-# Image Manipulation - Tugas Pengolahan Sinyal Digital
+## 3. Deskripsi Singkat Project
+Project ini dibuat untuk memenuhi tugas mata kuliah Pengolahan Sinyal Digital (PSD). Fokus utama dari project ini adalah menerapkan berbagai teknik manipulasi dan pemrosesan citra digital secara programatik. Melalui Jupyter Notebook, dilakukan eksperimen interaktif untuk memahami bagaimana operasi matematika dan filter spasial diaplikasikan pada matriks piksel citra dua dimensi.
 
-Repositori ini berisi tugas mata kuliah Pengolahan Sinyal Digital (PSD) yang berfokus pada manipulasi dan pemrosesan citra digital menggunakan **Jupyter Notebook**.
+## 4. Citra yang Digunakan
+Eksperimen dalam notebook ini menggunakan beberapa sampel citra digital sebagai input, antara lain:
+1. `[Nama_File_Citra_1.jpg/png]` - Foto Mobil Toyota Supra MK4
+2. `[Nama_File_Citra_2.jpg/png]` - Foto mobil Nissan Skyline GT-R R32 
 
-## 📌 Tentang Proyek
-Proyek ini mendemonstrasikan berbagai teknik dasar hingga lanjut dalam memanipulasi gambar digital secara programatik. Pemrosesan dilakukan langkah demi langkah di dalam file `image_manipulation.ipynb` untuk memberikan visualisasi yang jelas pada setiap operasi sinyal dua dimensi (citra).
+## 5. Library yang Digunakan
+Project ini mengandalkan beberapa library pihak ketiga Python berikut:
+* **OpenCV (`opencv-python`)**: Library utama untuk pemrosesan dan manipulasi citra.
+* **NumPy**: Untuk manipulasi array N-dimensi (matriks piksel gambar).
+* **Matplotlib**: Untuk menampilkan citra hasil proses serta visualisasi grafik histogram.
 
-## Citra yang Digunakan
+## 6. Cara Menjalankan Notebook
+Ikuti langkah-langkah berikut untuk menjalankan notebook di komputer lokal Anda:
 
-* Image 1 : Foto Mobil Toyota Supra MK 4
-* Image 2 : Foto Mobil Nissan Skyline R32
-
-## 🛠️ Prasyarat & Library yang Digunakan
-Untuk menjalankan notebook di repositori ini, pastikan Anda telah menginstal beberapa library Python berikut:
-* **Python 3.x**
-* **Jupyter Notebook / Lab**
-* **OpenCV** (`opencv-python`) - Untuk pemrosesan citra utama.
-* **NumPy** - Untuk manipulasi array dan matriks piksel.
-* **Matplotlib** - Untuk visualisasi citra dan grafik histogram.
-
-Anda bisa menginstal library yang diperlukan sekaligus dengan menjalankan perintah berikut di terminal:
-```bash
-pip install jupyter opencv-python numpy matplotlib
-```
-
-## 💻 Cara Menjalankan
-1. Clone repositori ini ke komputer lokal Anda:
+1. **Clone Repositori**
    ```bash
-   git clone https://github.com/NaufalAhnafussidqi/image-manipulation.git
+   git clone https://github.com
    ```
-2. Masuk ke direktori proyek:
+2. **Masuk ke Direktori Project**
    ```bash
    cd image-manipulation
    ```
-3. Jalankan Jupyter Notebook:
+3. **Instalasi Library Berdasarkan Prasyarat**
+   ```bash
+   pip install opencv-python numpy matplotlib jupyter
+   ```
+4. **Jalankan Jupyter Notebook**
    ```bash
    jupyter notebook
    ```
-4. Buka dan jalankan file `image_manipulation.ipynb`.
+5. **Buka File Notebook**
+   Pilih file `image_manipulation.ipynb` pada *interface* Jupyter, lalu jalankan setiap *cell* secara berurutan (`Shift + Enter`).
 
-## 📁 Struktur Repositori
-* `image_manipulation.ipynb`: Notebook utama tempat seluruh kode implementasi manipulasi citra ditulis.
-* `README.md`: Dokumentasi panduan proyek ini.
+## 7. Struktur Folder Project
+Berikut adalah struktur direktori dari repositori ini:
+```text
+image-manipulation/
+│
+├── image_manipulation.ipynb   # Notebook utama tempat kode eksperimen ditulis
+├── README.md                  # Dokumentasi panduan project
+└── [nama_gambar.jpg]          # File citra sampel yang digunakan sebagai input
+```
 
-## Ringkasan Hasil
+## 8. Ringkasan Hasil Eksperimen
+Berdasarkan pengerjaan di dalam notebook, berikut adalah ringkasan hasil dari setiap manipulasi citra yang dilakukan:
+* **Konversi Ruang Warna:** Berhasil mengubah citra RGB menjadi *grayscale* dan citra biner secara akurat menggunakan batas *thresholding* tertentu.
+* **Kecerahan & Kontras:** Peningkatan nilai kecerahan membuat visual gambar lebih terang, namun penambahan kontras yang berlebihan dapat memicu *clipping* warna pada piksel ekstrim.
+* **Filtering & Deteksi Tepi:** Filter *Gaussian Blur* berhasil mereduksi *noise* pada citra secara halus. Sementara itu, operator deteksi tepi [misal: Canny / Sobel] berhasil mengekstrak kontur dan garis batas objek utama dengan jelas.
 
-Eksperimen menunjukkan bahwa setiap teknik manipulasi citra memiliki fungsi yang berbeda. Image blending digunakan untuk menggabungkan dua citra, image negative membalik nilai pixel, transformasi logaritmik meningkatkan detail area gelap, dan transformasi gamma digunakan untuk koreksi pencahayaan.
-
-## Kesimpulan
-
-Manipulasi citra digital menggunakan OpenCV dapat dilakukan dengan berbagai metode sesuai kebutuhan. Pemilihan teknik yang tepat dapat meningkatkan kualitas visual dan informasi yang terkandung dalam citra.
+## 9. Kesimpulan Singkat
+Manipulasi citra digital pada dasarnya adalah operasi matematika (seperti perkalian, penjumlahan, dan konvolusi) yang dilakukan langsung pada matriks piksel. Pemilihan jenis filter, penyesuaian parameter kecerahan, serta ketepatan fungsi library sangat menentukan kualitas akhir dari citra terproses agar sesuai dengan kebutuhan analisis sinyal digital selanjutnya.
